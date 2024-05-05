@@ -1,9 +1,9 @@
-# Artist Search React Demo
+# Universities List - MVC Demo
 
-This is the robust, fully featured React App Artist search demo. The demo allows the visitor to search through node-modules. This README is a continuation of the article - pull down the master branch to complete code.
+This is the robust, fully featured React App Universities List . The demo allows the visitor to have the Universites list fetched by provided API with 2 additional features e.g. search and sorting list with Assending/Decending order through node-modules. This README is a continuation of the APP - pull down the master branch to complete code.
 
 - [Setup](#setup) - Follow these instructions to run the example search application.
-- [Features](#features) - Considerations when building a React-based search application for artist.
+- [Features](#features) - Considerations when building a React-based search application for Universities List.
 
 ## Setup
 
@@ -11,22 +11,18 @@ To get started, simply clone this repository and run `npm` to install dependenci
 
 ```
 # Clone the repository
-git clone https://github.com/links2design/artists.git
-cd artists
+git clone [https://github.com/links2design/artists.git](https://github.com/noormuhammaddev/universities-mvc.git)
+cd universities-mvc
 
 # Install dependencies
 npm install
 
 # start application
-npm start
+npm run dev
 ```
 
 ## Features
 
-1. Search artists
-2. Events against searched artist
-
-## General Information
-I have used some 3rd party libraries/npm packages to make my code more efficient like 
-1. `Formik` to mantain forms properties
-2. `Yup` to create validation for form elements
+1. List of Available Universities
+2. Search University with any keywords
+3. Sort List with Assending and decending Order
