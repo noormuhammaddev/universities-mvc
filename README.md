@@ -1,6 +1,6 @@
 # Universities List - MVC Demo
 
-This is the robust, fully featured React App Universities List . The demo allows the visitor to have the Universites list fetched by provided API with 2 additional features e.g. search and sorting list with Assending/Decending order through node-modules. This README is a continuation of the APP - pull down the master branch to complete code.
+This is the robust, fully featured React App Universities List . The demo allows the visitor to have the Universites list fetched by provided API with 2 additional features e.g. search and sorting list with Ascending/Descending order through node-modules. This README is a continuation of the APP - pull down the master branch to complete code.
 
 - [Setup](#setup) - Follow these instructions to run the example search application.
 - [Features](#features) - Considerations when building a React-based search application for Universities List.
@@ -25,4 +25,4 @@ npm run dev
 
 1. List of Available Universities
 2. Search University with any keywords
-3. Sort List with Assending and decending Order
+3. Sort List with Ascending and Descending Order
