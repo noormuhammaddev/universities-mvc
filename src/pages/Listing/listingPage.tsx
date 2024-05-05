@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import { BsSearch } from 'react-icons/bs';
-import { Link } from 'react-router-dom';
+import './style.scss';
+import ListItem from '../../components/ListItem/ListItem';
 
 interface dataType {
   alpha_two_code: string
@@ -39,23 +39,13 @@ const ListingPage = () => {
           setUniversitiesData(JSON.parse(storedData));
         } else {
           console.error('No data available in local storage.');
-          // Handle the case when there's no data available
-          // You might display an error message to the user or fallback to default values.
         }
       });
-
-
   }, []);
 
   const Filter = (event: any) => {
     setFilterValue(universitiesData.filter(f => f.name.toLocaleLowerCase().includes(event.target.value)))
   }
-
-  // const AscendingData = () => {
-  //   const sortData = universitiesData.sort((a,b) => a.name.localeCompare(b.name))
-  //   console.log("sortData", sortData)
-  //   setFilterValue(sortData)
-  // }
 
   const toggleSortOrder = () => {
     setIsAscending(!isAscending);
@@ -68,32 +58,37 @@ const ListingPage = () => {
     });
     setFilterValue(sortedData);
   };
+
+  console.log("filterValue: ", filterValue);
+
   return (
     <>
-      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-        <div className='left'>
-          <h2> Universities</h2>
-        </div>
-        <div className='right' style={{ display: "flex", justifyContent: "space-around" }}>
-          <div className="button" style={{ marginRight: "4px" }}>
+      <div className="page-wrapper">
+        <div className="page-header">
+          <h1> Universities</h1>
+
+          <div className="filter-wrapper">
             <button onClick={toggleSortOrder}>
               {isAscending ? 'Sort Descending' : 'Sort Ascending'}
             </button>
-          </div>
-          <div className="inputBox" >
             <input type="text" onChange={Filter} placeholder='Search ...' />
           </div>
         </div>
+
+        <div className="list-wrapper">
+          {
+            filterValue.map((item, index) => (
+              <ListItem
+                key={index}
+                url={`/details/${item.name}`}
+                label={item.name}
+              />
+            ))
+          }
+        </div>
+
       </div>
-      <div>
-        {
-          filterValue.map((item) => (
-            <Link to={`/details/${item.name}`} style={{ color: 'black', textDecoration: 'none' }}>
-              <li> {item.name}</li>
-            </Link>
-          ))
-        }
-      </div>
+      
     </>
 
   );

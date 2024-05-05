@@ -1,0 +1,31 @@
+@import "../../assets/scss/variables.scss";
+
+.list-item {
+  background-color: $white;
+  color: $dark;
+  border-radius: 4px;
+  text-decoration: none;
+  padding: 10px 12px;
+  padding-right: 40px;
+  box-shadow: 0 1px 3px $grey-100;
+  position: relative;
+  font-weight: 400;
+
+  img {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 15px;
+    width: 19px;
+  }
+
+  &:hover {
+    background-color: $grey-50;
+
+    img {
+      right: 5px;
+      width: 22px;
+    }
+  }
+}

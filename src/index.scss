@@ -1,0 +1,74 @@
+@import "./assets/scss/variables.scss";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  transition: 0.3s ease all;
+}
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  background-color: $grey;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+.page-wrapper {
+  width: 100%;
+  max-width: 767px;
+  margin: 0 auto;
+  padding: 30px 15px;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid $grey-50;
+  margin-bottom: 24px;
+  padding: 0 3px;
+
+  h1 {
+    color: $dark;
+    font-size: 22px;
+  }
+
+  .filter-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    input {
+      height: 34px;
+      border: 1px solid $grey-50;
+      padding: 0 10px;
+      border-radius: 4px;
+    }
+
+    button {
+      height: 32px;
+      background-color: $blue;
+      color: $white;
+      border: none;
+      cursor: pointer;
+      font-size: 12px;
+      font-weight: 500;
+      padding: 0 10px;
+      border-radius: 4px;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}

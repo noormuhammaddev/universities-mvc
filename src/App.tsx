@@ -1,5 +1,3 @@
-import { useState } from 'react'
-// import './App.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import ListingPage from './pages/Listing/listingPage'
 import DetailPage from './pages/DetailPage/DetailPage'
@@ -22,7 +20,6 @@ function App() {
           <Route path='/details/:name' element={<DetailPage />} />
           <Route path="*" element={<NoMatch />} />
         </Routes>
-
       </BrowserRouter>
     </>
   )
