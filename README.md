@@ -1,30 +1,28 @@
-# React + TypeScript + Vite
+# Universities List - MVC Demo
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the robust, fully featured React App Universities List . The demo allows the visitor to have the Universites list fetched by provided API with 2 additional features e.g. search and sorting list with Ascending/Descending order through node-modules. This README is a continuation of the APP - pull down the master branch to complete code.
 
-Currently, two official plugins are available:
+- [Setup](#setup) - Follow these instructions to run the example search application.
+- [Features](#features) - Considerations when building a React-based search application for Universities List.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Setup
 
-## Expanding the ESLint configuration
+To get started, simply clone this repository and run `npm` to install dependencies. You may need to go over some basic configuration steps.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+```
+# Clone the repository
+git clone [https://github.com/links2design/artists.git](https://github.com/noormuhammaddev/universities-mvc.git)
+cd universities-mvc
 
-- Configure the top-level `parserOptions` property like this:
+# Install dependencies
+npm install
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+# start application
+npm run dev
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Features
+
+1. List of Available Universities
+2. Search University with any keywords
+3. Sort List with Ascending and Descending Order
