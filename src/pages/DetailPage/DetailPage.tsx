@@ -18,6 +18,9 @@ const DetailPage = () => {
 
     return (
         <div className="page-wrapper">
+            <div className="page-header">
+                <h1>Details</h1>
+            </div>
             <div className="card">
                 <h2 className="card-header">{findUniversity.name}</h2>
 
